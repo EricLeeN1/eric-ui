@@ -1,0 +1,10 @@
+{
+  "name": "@gt-ui/doc",
+  "private": true,
+  "scripts": {
+    "dev": "echo dev",
+    "build": "echo build"
+  },
+  "devDependencies": {
+  }
+}

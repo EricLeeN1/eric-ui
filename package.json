@@ -1,0 +1,9 @@
+{
+  "name": "gt-ui",
+  "private": true,
+  "scripts": {
+    "hello": "echo 'hello world'"
+  },
+  "devDependencies": {
+  }
+}
