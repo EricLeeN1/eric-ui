@@ -5,5 +5,12 @@
     "hello": "echo 'hello world'"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.1",
+    "sass": "^1.66.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
   }
 }

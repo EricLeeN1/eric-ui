@@ -17,3 +17,14 @@
 ### 三、项目文档的 `package.json`
 - ```private: true```：项目文档的 ```packages.json``` 与根目录类似，它同样不需要被发布到 ```npm``` 仓库。
 - ```dependencies``` 和 ```devDependencies```：由于不涉及发包，因此依赖声明无需仔细考量，安装到那个里面效果都是一样的。不过还是建议大家还是按照“实际的含义”来决定安装类型。
+
+### 四、```pnpm``` 的 ```resolve-peers-from-workspace-root``` 机制
+
+    因为几乎所有子包的 peerDependencies 中都具有 vue(peerDependencies)我们结合 pnpm 的 resolve-peers-from-workspace-root 机制，可以统一所有子包中 vue 的版本。在执行这一步前，建议删除 node_modules 目录以及 pnpm-lock.yaml 文件，确保依赖重新被解析安装。
+    默认为 true。 启用后，将会使用根工作区项目的 dependencies 解析工作区中任何项目的 peer dependencies。这是一个有用的功能，因为你可以只在工作区的根目录中安装 peer dependencies，并且确保工作区中的所有项目都使用相同版本的 peer dependencies。
+
+### 依赖包
+
+- ```Vite``` 和 ```TypeScript```  进行构建
+- ```@vitejs/plugin-vue``` 由于我们要构建的是 Vue 组件库，Vue 推荐的组件开发范式 单文件组件 SFC 并不是原生的 Web 开发语法，而是 Vue 方面定义的“方言”，需要经过一个编译为原生 js 的过程。这个插件集成了 vue 编译器的能力，使得构建工具能够理解 Vue SFC 模板。
+
