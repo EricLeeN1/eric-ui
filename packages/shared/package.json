@@ -1,3 +1,19 @@
 {
-  "name": "@gt-ui/shared"
+  "name": "@gt-ui/shared",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@types/lodash": "^4.14.197",
+    "lodash": "^4.17.21"
+  }
 }

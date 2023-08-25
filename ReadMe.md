@@ -28,3 +28,15 @@
 - ```Vite``` 和 ```TypeScript```  进行构建
 - ```@vitejs/plugin-vue``` 由于我们要构建的是 Vue 组件库，Vue 推荐的组件开发范式 单文件组件 SFC 并不是原生的 Web 开发语法，而是 Vue 方面定义的“方言”，需要经过一个编译为原生 js 的过程。这个插件集成了 vue 编译器的能力，使得构建工具能够理解 Vue SFC 模板。
 
+
+### 公共方法代码预备
+
+- ```pnpm --filter @gt-ui/shared i -S lodash @types/lodash```
+
+### 声明内部模块关联
+
+- 方法1：```pnpm --filter @gt-ui/button i -S @gt-ui/shared```
+- 方法2：我们也可以先在子模块下的 ```package.json``` 中按照 ```workspace``` 协议 手动声明内部依赖，然后通过 ```pnpm -w i``` 执行全局安装，也能达到和上面那条命令一样的效果，两种方式二选一即可。
+
+### 执行 shared 包的构建指令
+- ```pnpm --filter @gt-ui/shared run build```

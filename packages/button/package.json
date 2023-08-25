@@ -2,7 +2,11 @@
   "name": "@gt-ui/button",
   "version": "0.0.0",
   "description": "",
-  "keywords": ["vue", "ui", "component library"],
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
   "author": "gt",
   "license": "MIT",
   "homepage": "https://github.com/EricLeeN1/eric-ui/blob/master/README.md",
@@ -10,8 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/EricLeeN1/eric-ui.git"
   },
-  "bugs": { 
-    "url" : "https://github.com/EricLeeN1/eric-ui/issues"
+  "bugs": {
+    "url": "https://github.com/EricLeeN1/eric-ui/issues"
   },
   "scripts": {
     "build": "echo build",
@@ -31,8 +35,7 @@
     "dist",
     "README.md"
   ],
-  "peerDependencies": {
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@gt-ui/shared": "workspace:^"
+  }
 }
