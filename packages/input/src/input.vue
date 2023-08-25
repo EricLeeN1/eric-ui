@@ -1,6 +1,6 @@
 <template>
   <input
-    class="openx-input"
+    class="er-input"
     type="text"
     :value="modelValue"
     @input="inputHandler"

@@ -1,5 +1,34 @@
 {
   "name": "@eric-ui/input",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "eric",
+  "license": "MIT",
+  "homepage": "https://github.com/EricLeeN1/eric-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricLeeN1/eric-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EricLeeN1/eric-ui/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/eric-ui-input.umd.js",
+  "module": "./dist/eric-ui-input.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/eric-ui-input.umd.js",
+      "module": "./dist/eric-ui-input.mjs"
+    }
+  },
   "dependencies": {
     "@eric-ui/shared": "workspace:^"
   }

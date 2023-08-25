@@ -1,11 +1,10 @@
 <template>
-  <button class="openx-button" @click="clickHandler">
+  <button class="er-button" @click="clickHandler">
     <slot></slot>
   </button>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
 import { hello } from "@eric-ui/shared";
 
 const props = withDefaults(

@@ -1,5 +1,17 @@
 {
   "name": "@eric-ui/ui",
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "main": "./dist/eric-ui.umd.js",
+  "module": "./dist/eric-ui.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/eric-ui.umd.js",
+      "module": "./dist/eric-ui.mjs"
+    }
+  },
   "dependencies": {
     "@eric-ui/button": "workspace:^",
     "@eric-ui/input": "workspace:^",

@@ -2,6 +2,14 @@
   "name": "@eric-ui/shared",
   "version": "0.0.0",
   "description": "",
+  "main": "./dist/eric-ui-shared.umd.js",
+  "module": "./dist/eric-ui-shared.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/eric-ui-shared.umd.js",
+      "module": "./dist/eric-ui-shared.mjs"
+    }
+  },
   "keywords": [
     "vue",
     "ui",
