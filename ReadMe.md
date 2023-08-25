@@ -7,7 +7,7 @@
 
 ### 二、组件包的 `package.json`
 
-- `name`：组件统一发布到 @gt-ui 坐标下，有坐标限制了命名空间，组件的名称可以尽可能简单。
+- `name`：组件统一发布到 @eric-ui 坐标下，有坐标限制了命名空间，组件的名称可以尽可能简单。
 - `files`：我们规定每个包的产物目录为 `dist`，此外还要一并发布 `README.md` 文档。
 - `publishConfig`：如果我们需要发布到私有 npm 仓，请取消 `publishConfig` 的注释并根据实际情况填写。
 - `peerDependencies`: 既然是使用 `vue3` 的组件库，我们需要正确声明主框架的版本。这里不将 `vue` 放入 `dependencies` 是因为用户项目同样也直接依赖 vue 框架，这样可能造成依赖版本不同的风险。这就是为什么周边库、插件总是要把主框架声明为 `peerDependencies` 的原因，我们的组件库也不例外。
@@ -31,12 +31,21 @@
 
 ### 公共方法代码预备
 
-- ```pnpm --filter @gt-ui/shared i -S lodash @types/lodash```
+- ```pnpm --filter @eric-ui/shared i -S lodash @types/lodash```
 
 ### 声明内部模块关联
 
-- 方法1：```pnpm --filter @gt-ui/button i -S @gt-ui/shared```
+- 方法1：```pnpm --filter @eric-ui/button i -S @eric-ui/shared```
 - 方法2：我们也可以先在子模块下的 ```package.json``` 中按照 ```workspace``` 协议 手动声明内部依赖，然后通过 ```pnpm -w i``` 执行全局安装，也能达到和上面那条命令一样的效果，两种方式二选一即可。
 
 ### 执行 shared 包的构建指令
-- ```pnpm --filter @gt-ui/shared run build```
+- ```pnpm --filter @eric-ui/shared run build```
+
+ 1、```pnpm init``` 初始化项目
+
+ 2、```pnpm config set <key> <value>``` 设置用户的全局 ```.npmrc``` 配置,也可以放在单个项目下
+
+ 3、```pnpm install``` 
+ 
+ - 安装项目公共开发依赖，声明在根目录的 package.json - devDependencies 中。```-w``` 选项代表在 ```monorepo``` 模式下的根目录进行操作。
+ - 每个子包都能访问根目录的依赖，适合把 ```TypeScript```、```Vite```、```eslint``` 等公共开发依赖装在这里。

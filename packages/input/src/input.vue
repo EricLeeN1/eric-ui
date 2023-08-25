@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { hello } from "@gt-ui/shared";
+import { hello } from "@eric-ui/shared";
 
 withDefaults(
   defineProps<{

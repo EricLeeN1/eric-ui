@@ -1,5 +1,5 @@
 {
-  "name": "@gt-ui/button",
+  "name": "@eric-ui/button",
   "version": "0.0.0",
   "description": "",
   "keywords": [
@@ -36,6 +36,6 @@
     "README.md"
   ],
   "dependencies": {
-    "@gt-ui/shared": "workspace:^"
+    "@eric-ui/shared": "workspace:^"
   }
 }

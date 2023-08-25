@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { defineProps } from "vue";
-import { hello } from "@gt-ui/shared";
+import { hello } from "@eric-ui/shared";
 
 const props = withDefaults(
   defineProps<{

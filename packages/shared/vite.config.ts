@@ -16,7 +16,7 @@ export default defineConfig({
       // 当产物为 umd、iife 格式时，该模块暴露的全局变量名称
       name: "GtuiShared",
       // 产物文件名称
-      fileName: "gt-ui-shared",
+      fileName: "eric-ui-shared",
     },
     // 为了方便学习，查看构建产物，将此置为 false，不要混淆产物代码
     minify: false,

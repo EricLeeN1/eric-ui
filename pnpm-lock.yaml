@@ -29,13 +29,13 @@ importers:
 
   packages/button:
     dependencies:
-      '@gt-ui/shared':
+      '@eric-ui/shared':
         specifier: workspace:^
         version: link:../shared
 
   packages/input:
     dependencies:
-      '@gt-ui/shared':
+      '@eric-ui/shared':
         specifier: workspace:^
         version: link:../shared
 
@@ -50,13 +50,13 @@ importers:
 
   packages/ui:
     dependencies:
-      '@gt-ui/button':
+      '@eric-ui/button':
         specifier: workspace:^
         version: link:../button
-      '@gt-ui/input':
+      '@eric-ui/input':
         specifier: workspace:^
         version: link:../input
-      '@gt-ui/shared':
+      '@eric-ui/shared':
         specifier: workspace:^
         version: link:../shared
 

@@ -1,6 +1,6 @@
 {
-  "name": "@gt-ui/input",
+  "name": "@eric-ui/input",
   "dependencies": {
-    "@gt-ui/shared": "workspace:^"
+    "@eric-ui/shared": "workspace:^"
   }
 }
