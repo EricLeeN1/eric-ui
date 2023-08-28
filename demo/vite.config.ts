@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: /^@eric-ui\/(.+)$/,
+        find: /^@ericui\/(.+)$/,
         replacement: join(__dirname, "..", "packages", "$1", "src"),
       },
     ],

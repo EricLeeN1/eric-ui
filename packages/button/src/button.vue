@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { hello } from "@eric-ui/shared";
+import { hello } from "@ericui/shared";
 
 const props = withDefaults(
   defineProps<{

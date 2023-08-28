@@ -1,5 +1,5 @@
 {
-  "name": "@eric-ui/demo",
+  "name": "@ericui/demo",
   "version": "0.0.0",
   "private": "true",
   "description": "",
@@ -14,7 +14,7 @@
     "test": "echo test"
   },
   "dependencies": {
-    "@eric-ui/ui": "workspace:^"
+    "@ericui/ui": "workspace:^"
   },
   "devDependencies": {
   }

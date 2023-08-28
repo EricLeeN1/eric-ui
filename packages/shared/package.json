@@ -1,13 +1,13 @@
 {
-  "name": "@eric-ui/shared",
+  "name": "@ericui/shared",
   "version": "0.0.0",
   "description": "",
-  "main": "./dist/eric-ui-shared.umd.js",
-  "module": "./dist/eric-ui-shared.mjs",
+  "main": "./dist/ericui-shared.umd.js",
+  "module": "./dist/ericui-shared.mjs",
   "exports": {
     ".": {
-      "require": "./dist/eric-ui-shared.umd.js",
-      "module": "./dist/eric-ui-shared.mjs"
+      "require": "./dist/ericui-shared.umd.js",
+      "module": "./dist/ericui-shared.mjs"
     }
   },
   "keywords": [

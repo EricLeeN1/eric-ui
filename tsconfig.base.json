@@ -37,7 +37,7 @@
       "types": [],
       // 路径别名设置
       "paths": {
-        "@eric-ui/*": ["packages/*/src"]
+        "@ericui/*": ["packages/*/src"]
       }
     }
   }

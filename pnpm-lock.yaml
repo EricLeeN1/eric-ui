@@ -27,7 +27,7 @@ importers:
 
   demo:
     dependencies:
-      '@eric-ui/ui':
+      '@ericui/ui':
         specifier: workspace:^
         version: link:../packages/ui
 
@@ -35,13 +35,13 @@ importers:
 
   packages/button:
     dependencies:
-      '@eric-ui/shared':
+      '@ericui/shared':
         specifier: workspace:^
         version: link:../shared
 
   packages/input:
     dependencies:
-      '@eric-ui/shared':
+      '@ericui/shared':
         specifier: workspace:^
         version: link:../shared
 
@@ -56,13 +56,13 @@ importers:
 
   packages/ui:
     dependencies:
-      '@eric-ui/button':
+      '@ericui/button':
         specifier: workspace:^
         version: link:../button
-      '@eric-ui/input':
+      '@ericui/input':
         specifier: workspace:^
         version: link:../input
-      '@eric-ui/shared':
+      '@ericui/shared':
         specifier: workspace:^
         version: link:../shared
 

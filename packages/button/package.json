@@ -1,5 +1,5 @@
 {
-  "name": "@eric-ui/button",
+  "name": "@ericui/button",
   "version": "0.0.0",
   "description": "",
   "keywords": [
@@ -9,24 +9,24 @@
   ],
   "author": "eric",
   "license": "MIT",
-  "homepage": "https://github.com/EricLeeN1/eric-ui/blob/master/README.md",
+  "homepage": "https://github.com/EricLeeN1/ericui/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EricLeeN1/eric-ui.git"
+    "url": "git+https://github.com/EricLeeN1/ericui.git"
   },
   "bugs": {
-    "url": "https://github.com/EricLeeN1/eric-ui/issues"
+    "url": "https://github.com/EricLeeN1/ericui/issues"
   },
   "scripts": {
     "build": "vite build",
     "test": "echo test"
   },
-  "main": "./dist/eric-ui-button.umd.js",
-  "module": "./dist/eric-ui-button.mjs",
+  "main": "./dist/ericui-button.umd.js",
+  "module": "./dist/ericui-button.mjs",
   "exports": {
     ".": {
-      "require": "./dist/eric-ui-button.umd.js",
-      "module": "./dist/eric-ui-button.mjs"
+      "require": "./dist/ericui-button.umd.js",
+      "module": "./dist/ericui-button.mjs"
     }
   },
   "files": [
@@ -34,6 +34,6 @@
     "README.md"
   ],
   "dependencies": {
-    "@eric-ui/shared": "workspace:^"
+    "@ericui/shared": "workspace:^"
   }
 }

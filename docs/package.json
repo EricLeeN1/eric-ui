@@ -1,5 +1,5 @@
 {
-  "name": "@eric-ui/doc",
+  "name": "@ericui/doc",
   "private": true,
   "scripts": {
     "dev": "echo dev",

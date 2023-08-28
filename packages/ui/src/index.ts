@@ -1,3 +1,3 @@
-export * from "@eric-ui/button";
-export * from "@eric-ui/input";
-export * from "@eric-ui/shared";
+export * from "@ericui/button";
+export * from "@ericui/input";
+export * from "@ericui/shared";

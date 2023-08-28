@@ -7,7 +7,7 @@
 
 ### 二、组件包的 `package.json`
 
-- `name`：组件统一发布到 @eric-ui 坐标下，有坐标限制了命名空间，组件的名称可以尽可能简单。
+- `name`：组件统一发布到 @ericui 坐标下，有坐标限制了命名空间，组件的名称可以尽可能简单。
 - `files`：我们规定每个包的产物目录为 `dist`，此外还要一并发布 `README.md` 文档。
 - `publishConfig`：如果我们需要发布到私有 npm 仓，请取消 `publishConfig` 的注释并根据实际情况填写。
 - `peerDependencies`: 既然是使用 `vue3` 的组件库，我们需要正确声明主框架的版本。这里不将 `vue` 放入 `dependencies` 是因为用户项目同样也直接依赖 vue 框架，这样可能造成依赖版本不同的风险。这就是为什么周边库、插件总是要把主框架声明为 `peerDependencies` 的原因，我们的组件库也不例外。
@@ -132,11 +132,11 @@ pnpm --filter "...[HEAD~1]" run build
 
 ### 公共方法代码预备
 
-- `pnpm --filter @eric-ui/shared i -S lodash @types/lodash`
+- `pnpm --filter @ericui/shared i -S lodash @types/lodash`
 
 ### 声明内部模块关联
 
-- 方法 1：`pnpm --filter @eric-ui/button i -S @eric-ui/shared`
+- 方法 1：`pnpm --filter @ericui/button i -S @ericui/shared`
 - 方法 2：我们也可以先在子模块下的 `package.json` 中按照 `workspace` 协议 手动声明内部依赖，然后通过 `pnpm -w i` 执行全局安装，也能达到和上面那条命令一样的效果，两种方式二选一即可。
 
 ### 六、依赖包
@@ -167,23 +167,69 @@ pnpm --filter "...[HEAD~1]" run build
 
 #### 2、公共方法代码预备
 
-我们安排 ```@eric-ui/shared``` 作为公具方法包，将成为所有其他模块的依赖项。
+我们安排 ```@ericui/shared``` 作为公具方法包，将成为所有其他模块的依赖项。
 
 以自有方法和外部方法lodash为例。我们创建一个打印 ```HelloWorld``` 方法并且要导出一个方法 ```useLodash``` ，这个方法原封不动地返回 ```lodash``` 实例对象。```index.ts``` 会作为出口统一导出这些方法。
 
 ```bash
 
 # 为 shared 包安装 lodash 相关依赖
-pnpm --filter @eric-ui/shared i -S lodash @types/lodash
+pnpm --filter @ericui/shared i -S lodash @types/lodash
 
 ```
 
 #### 3、构建 Vue 组件模块
 
+  将 ```package.json``` 中的 ```build``` 命令更换为 ```vite build```。
 
 
-#### 
+```javascript
 
+// packages/button/vite.config.ts
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+export default defineConfig({
+  // 增加插件的使用
+  plugins: [vue()],
+  build: {
+    lib: {
+      entry: './src/index.ts',
+      name: 'EricuiButton',
+      fileName: 'ericui-button',
+    },
+    minify: false,
+    rollupOptions: {
+      external: [
+        // 除了 @ericui/shared，未来可能还会依赖其他内部模块，不如用正则表达式将 @ericui 开头的依赖项一起处理掉
+        /@ericui.*/, 
+        'vue'
+      ],
+    },
+  }
+})
+
+``` 
+
+之后执行 ```button``` 包的构建命令，输出产物。
+
+构建成功后，根据产物路径修改 ```package.json``` 的入口字段。
+
+```javascript
+// packages/button/package.json
+{
+  // 省略其他无关配置 ...
+  "main": "./dist/ericui-button.umd.js",
+  "module": "./dist/ericui-button.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/ericui-button.umd.js",
+      "module": "./dist/ericui-button.mjs",
+      // ...
+    }
+  },
+}
+```
 
 
 
@@ -193,4 +239,4 @@ pnpm --filter @eric-ui/shared i -S lodash @types/lodash
 
 ### 执行 shared 包的构建指令
 
-- `pnpm --filter @eric-ui/shared run build`
+- `pnpm --filter @ericui/shared run build`

@@ -1,20 +1,20 @@
 {
-  "name": "@eric-ui/ui",
+  "name": "@ericui/ui",
   "scripts": {
     "build": "vite build",
     "test": "echo test"
   },
-  "main": "./dist/eric-ui.umd.js",
-  "module": "./dist/eric-ui.mjs",
+  "main": "./dist/ericui.umd.js",
+  "module": "./dist/ericui.mjs",
   "exports": {
     ".": {
-      "require": "./dist/eric-ui.umd.js",
-      "module": "./dist/eric-ui.mjs"
+      "require": "./dist/ericui.umd.js",
+      "module": "./dist/ericui.mjs"
     }
   },
   "dependencies": {
-    "@eric-ui/button": "workspace:^",
-    "@eric-ui/input": "workspace:^",
-    "@eric-ui/shared": "workspace:^"
+    "@ericui/button": "workspace:^",
+    "@ericui/input": "workspace:^",
+    "@ericui/shared": "workspace:^"
   }
 }

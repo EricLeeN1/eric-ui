@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Button>1111</Button>
-    <Input />
+    <Button>点击操作</Button>
+    <Input :value="12"/>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Button, Input } from "@eric-ui/ui";
+import { Button, Input } from "@ericui/ui";
 </script>
 
 <style scoped></style>
