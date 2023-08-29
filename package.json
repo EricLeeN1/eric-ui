@@ -2,9 +2,11 @@
   "name": "ericui",
   "private": true,
   "scripts": {
-    "hello": "echo 'hello world'"
+    "hello": "echo 'hello world'",
+    "build:ui": "pnpm --filter ./packages/** run build"
   },
   "devDependencies": {
+    "@types/node": "^20.5.7",
     "@vitejs/plugin-vue": "^4.3.1",
     "sass": "^1.66.1",
     "typescript": "^5.1.6",

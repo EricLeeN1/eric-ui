@@ -209,7 +209,7 @@ export default defineConfig({
   }
 })
 
-``` 
+```
 
 之后执行 ```button``` 包的构建命令，输出产物。
 
@@ -230,6 +230,32 @@ export default defineConfig({
   },
 }
 ```
+其他模块参考此组件。
+
+#### 4、整体构建
+
+- 方法1：```pnpm --filter "./packages/**" run build``` 组件的构建完成了后，我们可以通过 路径过滤器 选中 ```packages``` 目录下所有包进行构建。
+- 方法2：```pnpm --filter @ericui/ui... run build``` 
+  由于 ```@ericui/ui``` 是组件库的统一出口包，它的 ```package.json``` 的 ```dependencies``` 字段中声明了所有其他模块，我们也可以用依赖过滤器 ```...```，构建 ```ui``` 以及其所有的依赖项，达到整体构建的效果。不过如果不能确保所有包都在 ```ui``` 中再进行一次导出，还是采用前者更佳。
+
+### 八、TypeScript
+
+#### 1、获取配置文件的信息
+
+  ```npx tsc -p tsconfig.src.json --showConfig```
+
+  未来随着项目的增长，我们会根据实际情况不断更新这些 ```tsconfig```，例如让已有的 ```ts project``` 包含更多的源码；或者划分出新的 ```ts project```(比如测试专用的 ```tsconfig.test.json``` )。
+
+#### 2、补充一些缺失的类型声明
+
+  ```pnpm i -wD @types/node```
+
+  我们在 ```tsconfig.src.json``` 的 ```include``` 字段中包含了 ```typings/env.d.ts```，这是为了让 ```TypeScript``` 对于 ```Vite``` 的一些特定功能提供类型定义(参考：TypeScript 的智能提示)，我们应该实际创建这个文件。这个文件除了服务于 ```Vite```，在后续可能将其他一些环境相关的类型定义放在这里
+
+
+
+
+
 
 
 
