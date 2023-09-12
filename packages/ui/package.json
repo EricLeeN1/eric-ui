@@ -6,10 +6,12 @@
   },
   "main": "./dist/ericui.umd.js",
   "module": "./dist/ericui.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/ericui.umd.js",
-      "module": "./dist/ericui.mjs"
+      "module": "./dist/ericui.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "dependencies": {

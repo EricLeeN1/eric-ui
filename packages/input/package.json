@@ -23,10 +23,12 @@
   },
   "main": "./dist/ericui-input.umd.js",
   "module": "./dist/ericui-input.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/ericui-input.umd.js",
-      "module": "./dist/ericui-input.mjs"
+      "module": "./dist/ericui-input.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "dependencies": {

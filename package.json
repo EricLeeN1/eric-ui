@@ -3,14 +3,21 @@
   "private": true,
   "scripts": {
     "hello": "echo 'hello world'",
-    "build:ui": "pnpm --filter ./packages/** run build"
+    "clean:type": "rimraf ./dist",
+    "type:node": "tsc -p tsconfig.node.json --noEmit --composite false",
+    "type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
+    "mv-type": "tsx ./scripts/dts-mv.ts",
+    "build:ui": "pnpm run type:src && pnpm --filter ./packages/** run build && pnpm run mv-type"
   },
   "devDependencies": {
     "@types/node": "^20.5.7",
     "@vitejs/plugin-vue": "^4.3.1",
+    "rimraf": "^5.0.1",
     "sass": "^1.66.1",
+    "tsx": "^3.12.9",
     "typescript": "^5.1.6",
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    "vue-tsc": "^1.8.10"
   },
   "dependencies": {
     "vue": "^3.3.4"
