@@ -35,10 +35,6 @@
     "README.md"
   ],
   "publishConfig": {},
-
-  "peerDependencies": {
-    "vue": ">=3.0.0"
-  },
   "dependencies": {},
   "devDependencies": {}
 }

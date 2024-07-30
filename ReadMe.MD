@@ -94,3 +94,13 @@ devDependencies 根目录中的开发依赖代表所有模块都会有一些公�
 - 表格中的 `项目中` 理解为依赖信息被定义在我们正在开发的模块，对应根目录下的 `package.json` 中；
 
 - `依赖中` 理解为依赖信息被定义在 `node_modules` 内的依赖包中(即依赖的依赖)，对应 `node_modules/${packageName}/package.json`。
+
+生成代码片段
+
+    "": {
+      "prefix": "",
+      "body": [
+        ""
+      ],
+      "description": ""
+    }

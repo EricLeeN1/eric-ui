@@ -1,9 +1,12 @@
 {
   "name": "@ericui/shared",
   "version": "0.0.0",
-
   "description": "",
-  "keywords": ["vue", "ui", "component library"],
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
   "author": "EricLee",
   "license": "MIT",
   "homepage": "https://github.com/EricLeeN1/eric-ui/blob/master/README.md",
@@ -11,14 +14,13 @@
     "type": "git",
     "url": "git+https://github.com/EricLeeN1/eric-ui.git"
   },
-  "bugs": { 
-    "url" : "https://github.com/EricLeeN1/eric-ui/issues"
+  "bugs": {
+    "url": "https://github.com/EricLeeN1/eric-ui/issues"
   },
   "scripts": {
     "build": "echo build",
     "test": "echo test"
   },
-
   "main": "",
   "module": "",
   "types": "",
@@ -29,16 +31,13 @@
       "types": ""
     }
   },
-
   "files": [
     "dist",
     "README.md"
   ],
   "publishConfig": {},
-
-  "peerDependencies": {
-    "vue": ">=3.0.0"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@types/lodash": "^4.17.7",
+    "lodash": "^4.17.21"
+  }
 }
