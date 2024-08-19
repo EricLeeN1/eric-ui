@@ -119,3 +119,16 @@ devDependencies 根目录中的开发依赖代表所有模块都会有一些公�
 给其他包安装本地依赖
 
   pnpm --filter @ericui/button i -S @ericui/shared
+
+如果对 tsconfig 实际应用的编译选项或者包含的文件产生疑惑，可以通过以下命令去验证
+
+  npx tsc -p tsconfig.src.json --showConfig
+
+对所有源码文件进行类型检查，通过以下命令即可实现。
+
+  npx tsc -p tsconfig.src.json --noEmit --composite false
+
+由于源码是 Vue 组件，所以 tsc 命令会报错，我们需要借助 vue-tsc 来支持
+
+  npm i -D vue-tsc
+  npx vue-tsc -p tsconfig.src.json --noEmit --composite false

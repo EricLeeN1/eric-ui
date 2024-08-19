@@ -1,5 +1,5 @@
 <template>
-  <button class="openx-button" @click="clickHandler">
+  <button class="eric-button" @click="clickHandler">
     <slot></slot>
   </button>
 </template>
