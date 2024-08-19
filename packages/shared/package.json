@@ -18,16 +18,16 @@
     "url": "https://github.com/EricLeeN1/eric-ui/issues"
   },
   "scripts": {
-    "build": "echo build",
+    "build": "vite build",
     "test": "echo test"
   },
-  "main": "",
-  "module": "",
+  "main": "./dist/Ericui-shared.umd.js",
+  "module": "./dist/Ericui-shared.mjs",
   "types": "",
   "exports": {
     ".": {
-      "require": "",
-      "module": "",
+      "require": "./dist/Ericui-shared.umd.js",
+      "module": "./dist/Ericui-shared.mjs",
       "types": ""
     }
   },

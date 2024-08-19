@@ -1,0 +1,11 @@
+{
+  "name": "@ericui/demo",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "dependencies": {
+    "@ericui/ui": "workspace:^"
+  },
+  "devDependencies": {}
+}

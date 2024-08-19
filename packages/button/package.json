@@ -1,9 +1,12 @@
 {
   "name": "@ericui/button",
   "version": "0.0.0",
-
   "description": "",
-  "keywords": ["vue", "ui", "component library"],
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
   "author": "EricLee",
   "license": "MIT",
   "homepage": "https://github.com/EricLeeN1/eric-ui/blob/master/README.md",
@@ -11,30 +14,30 @@
     "type": "git",
     "url": "git+https://github.com/EricLeeN1/eric-ui.git"
   },
-  "bugs": { 
-    "url" : "https://github.com/EricLeeN1/eric-ui/issues"
+  "bugs": {
+    "url": "https://github.com/EricLeeN1/eric-ui/issues"
   },
   "scripts": {
-    "build": "echo build",
+    "build": "vite build",
     "test": "echo test"
   },
-
-  "main": "",
-  "module": "",
+  "main": "./dist/Ericui-button.umd.js",
+  "module": "./dist/Ericui-button.mjs",
   "types": "",
   "exports": {
     ".": {
-      "require": "",
-      "module": "",
+      "require": "./dist/Ericui-button.umd.js",
+      "module": "./dist/Ericui-button.mjs",
       "types": ""
     }
   },
-
   "files": [
     "dist",
     "README.md"
   ],
   "publishConfig": {},
-  "dependencies": {},
+  "dependencies": {
+    "@ericui/shared": "workspace:^"
+  },
   "devDependencies": {}
 }

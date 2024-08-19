@@ -25,11 +25,25 @@ importers:
         specifier: ^5.3.5
         version: 5.3.5(sass@1.77.8)
 
+  demo:
+    dependencies:
+      '@ericui/ui':
+        specifier: workspace:^
+        version: link:../packages/ui
+
   docs: {}
 
-  packages/button: {}
+  packages/button:
+    dependencies:
+      '@ericui/shared':
+        specifier: workspace:^
+        version: link:../shared
 
-  packages/input: {}
+  packages/input:
+    dependencies:
+      '@ericui/shared':
+        specifier: workspace:^
+        version: link:../shared
 
   packages/shared:
     dependencies:
@@ -39,6 +53,18 @@ importers:
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
+
+  packages/ui:
+    dependencies:
+      '@ericui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@ericui/input':
+        specifier: workspace:^
+        version: link:../input
+      '@ericui/shared':
+        specifier: workspace:^
+        version: link:../shared
 
 packages:
 

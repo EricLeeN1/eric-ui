@@ -2,7 +2,7 @@
   "name": "eric-ui",
   "private": true,
   "scripts": {
-    "hello": "echo 'hello world'"
+    "build:ui": "pnpm --filter './packages/**' run build"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.1",
