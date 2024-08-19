@@ -2,14 +2,18 @@
   "name": "eric-ui",
   "private": true,
   "scripts": {
+    "clean:type": "rimraf ./dist",
     "type:node": "tsc -p tsconfig.node.json --noEmit --composite false",
-    "type:src": "vue-tsc -p tsconfig.src.json --noEmit --composite false",
-    "build:ui": "pnpm run type:src && pnpm --filter './packages/**' run build"
+    "type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
+    "mv-type": "tsx ./scripts/dts-mv.ts",
+    "build:ui": "pnpm run type:src && pnpm --filter ./packages/** run build && pnpm run mv-type"
   },
   "devDependencies": {
     "@types/node": "^22.4.1",
     "@vitejs/plugin-vue": "^5.1.1",
+    "rimraf": "^6.0.1",
     "sass": "^1.77.8",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.4",
     "vite": "^5.3.5",
     "vue-tsc": "^2.0.29"

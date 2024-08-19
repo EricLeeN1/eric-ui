@@ -23,12 +23,12 @@
   },
   "main": "./dist/Ericui-shared.umd.js",
   "module": "./dist/Ericui-shared.mjs",
-  "types": "",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/Ericui-shared.umd.js",
       "module": "./dist/Ericui-shared.mjs",
-      "types": ""
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
