@@ -29,7 +29,7 @@ async function match() {
   return res.filter((item) => item.isDirectory()).map((item) => item.name);
 }
 
-/** 
+/**
  * 处理单个包的 dts 移动
  * @param pkgName 包名
  */
@@ -45,10 +45,10 @@ async function resolve(pkgName: string) {
       return cp(source, target, {
         force: true,
         recursive: true,
-      })
-    })
+      });
+    });
     await Promise.all(cpTasks);
-    console.log(`[${pkgName}]: moved successfully!`);  
+    console.log(`[${pkgName}]: moved successfully!`);
   } catch (e) {
     console.log(`[${pkgName}]: failed to move!`);
   }
@@ -57,4 +57,4 @@ async function resolve(pkgName: string) {
 main().catch((e) => {
   console.error(e);
   process.exit(1);
-})
+});

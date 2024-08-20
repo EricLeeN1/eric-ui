@@ -1,11 +1,15 @@
 <template>
-  <button class="eric-button" @click="clickHandler">
-    <slot></slot>
+  <button
+    class="eric-button"
+    @click="clickHandler"
+  >
+    <slot />
   </button>
 </template>
 
 <script setup lang="ts">
-import { hello } from "@ericui/shared";
+import { hello } from '@ericui/shared';
+
 const props = withDefaults(defineProps<{
   text?: string;
 }>(), {
